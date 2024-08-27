@@ -1,0 +1,60 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E7F4E4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  font-family: 'Space Mono', monospace;
+  transition: background-color 0.3s ease;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+/* src/App.css */
+.app.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.app.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.header.light {
+  background-color: #f1f1f1;
+}
+
+.header.dark {
+  background-color: #222;
+}
+/* App.css */
+[data-theme="light"] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Other styles */

@@ -1,0 +1,249 @@
+.user-card {
+  padding: 48px;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Light Theme Styles */
+:root[data-theme="light"] .user-card {
+  /* --card-background: #ffffff; */
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --body-background: #f0f0f0;
+  box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+/* Dark Theme Styles */
+:root[data-theme="dark"] .user-card {
+  /* --card-background: #2e2e2e; */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  /* --body-background: #1e1e1e; */
+  box-shadow: none;
+}
+
+.user-card .primary-info {
+  padding-left: 154px;
+  position: relative;
+}
+
+.user-card .primary-info .avatar {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.user-card .primary-info .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.user-card .primary-info .names-and-date {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.user-card .primary-info .names-and-date .name h1 {
+  font-size: 1.63rem;
+  line-height: 48px;
+  font-weight: bold;
+  color: var(--text-primary);
+  transition: color 0.3s ease-in-out;
+}
+
+.user-card .primary-info .names-and-date .name p {
+  margin-bottom: 20px;
+}
+
+.user-card .primary-info .names-and-date .name p a {
+  font-size: 1rem;
+  color: var(--color-blue);
+}
+
+.user-card .primary-info .names-and-date .date {
+  font-size: 1rem;
+  line-height: 48px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+.user-card .detailed-info {
+  padding-left: 154px;
+}
+
+.user-card .detailed-info p.bio {
+  font-size: 1rem;
+  line-height: 24px;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+.user-card .detailed-info .highlight {
+  background-color: var(--body-background);
+  padding: 15px 32px;
+  border-radius: 10px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-card .detailed-info .highlight div .label {
+  font-size: 0.88rem;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+.user-card .detailed-info .highlight div p {
+  font-size: 1.38rem;
+  font-weight: bold;
+  line-height: 34px;
+  color: var(--text-primary);
+}
+
+.user-card .detailed-info .highlight div .label,
+.user-card .detailed-info .highlight div p {
+  transition: color 0.3s ease-in-out;
+}
+
+.user-card .detailed-info .detailed-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card .detailed-info .detailed-links ul {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.user-card .detailed-info .detailed-links ul li img {
+  vertical-align: sub; 
+  margin-right: 6px;
+     
+}
+
+.user-card .detailed-info .detailed-links ul li.unavailable {
+  opacity: 0.5;
+}
+
+.user-card .detailed-info .detailed-links ul li a {
+  color: inherit;
+}
+
+.user-card .detailed-info .detailed-links ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.user-card .detailed-info .detailed-links ul li svg {
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 768px) {
+  .user-card .primary-info,
+  .user-card .detailed-info {
+    padding-left: 0;
+  }
+
+  .user-card .primary-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .user-card .primary-info .avatar {
+    position: unset;
+    margin-right: 40px;
+  }
+
+  .user-card .primary-info .names-and-date {
+    display: block;
+  }
+
+  .user-card .primary-info .names-and-date .name h1 {
+    line-height: 38px;
+  }
+
+  .user-card .primary-info .names-and-date .name p {
+    margin-bottom: unset;
+  }
+
+  .user-card .primary-info .names-and-date .date {
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .user-card {
+    padding: 32px 24px;
+  }
+
+  .user-card .primary-info .avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  .user-card .primary-info .names-and-date .name h1 {
+    font-size: 1.2rem;
+    line-height: 24px;
+  }
+
+  .user-card .detailed-info .highlight {
+    padding: 15px 25px;
+  }
+
+  .user-card .detailed-info .highlight div {
+    text-align: center;
+  }
+
+  .user-card .detailed-info .detailed-links {
+    display: block;
+  }
+
+  .user-card .detailed-info .detailed-links ul {
+    margin-right: unset;
+    margin-bottom: 10px;
+  }
+
+  .user-card .detailed-info .detailed-links ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+/* Light Theme Styles */
+:root[data-theme="light"] .user-card .detailed-info .detailed-links ul li svg,
+:root[data-theme="light"] .user-card .detailed-info .detailed-links ul li img {
+  fill: #4670bb; /* Blue color for SVG icons */
+  filter: none; /* Ensure image icons are blue in light mode */
+  transition: fill 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Dark Theme Styles */
+:root[data-theme="dark"] .user-card .detailed-info .detailed-links ul li svg,
+:root[data-theme="dark"] .user-card .detailed-info .detailed-links ul li img {
+  fill: #ffffff; /* White color for SVG icons */
+  filter: brightness(0) invert(1); /* Make image icons white in dark mode */
+  transition: fill 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Ensuring correct icon color on hover */
+:root[data-theme="light"] .user-card .detailed-info .detailed-links ul li:hover svg,
+:root[data-theme="light"] .user-card .detailed-info .detailed-links ul li:hover img,
+:root[data-theme="dark"] .user-card .detailed-info .detailed-links ul li:hover svg,
+:root[data-theme="dark"] .user-card .detailed-info .detailed-links ul li:hover img {
+  /* No need to change color on hover if it's already set for the theme */
+  fill: inherit;
+  filter: inherit;
+}

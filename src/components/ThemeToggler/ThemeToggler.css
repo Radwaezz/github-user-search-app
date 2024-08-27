@@ -1,0 +1,27 @@
+.theme-toggler {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--color-grey);
+  transition: color 0.3s ease-in-out;
+}
+
+.theme-toggler:hover {
+  color: var(--color-black-light);
+}
+
+:root[data-theme="dark"] .theme-toggler {
+  color: var(--color-white);
+}
+
+:root[data-theme="dark"] .theme-toggler:hover {
+  color: var(--color-grey);
+}
+
+.theme-toggler .switch-to {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  margin-right: 16px;
+}

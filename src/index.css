@@ -1,0 +1,88 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-white-light: #F6F8FF;
+    --color-white-lighter: #FEFEFE;
+    --color-blue: #0079FF;
+    --color-blue-light: #60ABFF;
+    --color-black: #141D2F;
+    --color-black-light: #2B3442;
+    --color-black-lighter: #1E2A47;
+    --color-grey: #4B6A9B;
+    --color-red: #F74646;
+    --body-background: var(--color-white-light);
+    --card-background: var(--color-white-lighter);
+    --text-primary: var(--color-black-light);
+    --text-secondary: var(--color-grey);
+  }
+  
+  :root[data-theme="dark"] {
+    --body-background: var(--color-black);
+    --card-background: var(--color-black-lighter);
+    --text-primary: var(--color-white);
+    --text-secondary: var(--color-white);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Space Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--body-background);
+    color: var(--text-secondary);
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body #root {
+    width: 100%;
+    max-width: 730px;
+    margin: 30px auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body #root {
+      max-width: 574px;
+      margin: 30px 24px;
+    }
+  }
+  
+  @media screen and (max-width: 570px) {
+    html {
+      font-size: 14px;
+      height: auto;
+    }
+  }
+  
+
+
+
+/* index.css or global stylesheet */
+:root[data-theme='light'] {
+    --background-color: white;
+    --text-color: black;
+  }
+  
+  :root[data-theme='dark'] {
+    --background-color: rgb(17, 22, 38);
+    --text-color: white;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
